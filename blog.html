@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Relied BD</title>
+    <!-- daisyUI and Tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        btnColor: '#B4F461',
+                        headerBg: '#F9F7F3',
+                        secondaryText: 'rgba(17, 17, 17, 0.7)',
+                    },
+                    fontFamily: {
+                        lexend: 'lexend',
+                    }
+            }
+        }
+    }
+    </script>
+</head>
+<body class="font-lexend">
+    <header class="container mx-auto bg-headerBg sticky top-0 z-10"></header>
+        <!-- Nav Section  -->
+        <nav class="">
+            <div class="navbar flex justify-between">
+                <div class="navbar-start">
+                    <!-- Blog button  -->
+                    <a href="./index.html"><button class="my-3 btn btn-normal bg-btnColor">Home</button></a>
+                </div>
+                <!-- logo container -->
+                <div class="navbar-center lg:flex">
+                    <div class="flex items-center gap-3 font-semibold lg:font-bold">
+                        <div>
+                            <img class="cursor-pointer" src="./assets/logo.png" alt="">
+                        </div>
+                        <div>
+                            <h2 class="textsm lg:text-xl cursor-pointer">Flood Relief BD</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- balance section -->
+                <div class="navbar-end">
+                    <div class="flex items-center gap-1 lg:gap-2">
+                        <div>
+                            <img src="./assets/coin.png" alt="">
+                        </div>
+                        <div>
+                            <h4 class=" text-sm lg:text-lg font-semibold text-gray-700">5000 BDT</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Accordion Section -->
+        <section class="w-9/12 mx-auto mt-20">
+            <h1 class="text-2xl font-bold text-left my-10">Frequently Asked Question (FAQ'S)</h1>
+            <div class="collapse collapse-arrow bg-base-200 rounded-none border border-zinc-200 rounded-t-xl">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>Document Object Model is a model which can be used to access HTML using JavaScript.It defines the logical structure of documents.<br>It DOM all the HTML element are considered nodes. The full HTML document is considered as a tree, where the root of the tree is html tag.<br>DOM is use to manipulate html elements. It can also style html document using different properties.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200 rounded-none border border-zinc-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>Elements can be selected in multiple ways using DOM.</p>
+                    <br>
+                        <p>1. getElementsByTagName()</p>
+                        <p>2. getElementById()</p>
+                        <p>3. getElementByClassName()</p>
+                        <p>4. querySelector()</p>
+                        <p>5. querySelectorAll()</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200 rounded-none border border-zinc-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener<br>to each and
+                    every similar element, we can add an event listener to a parent element and call an event <br>on a particular target using
+                    the .target property of the event object.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200 rounded-none border border-zinc-200 rounded-b-xl">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?
+                    useful?</div>
+                <div class="collapse-content">
+                    <p>
+                    1. setAttribute()
+                    To change an element's attributes, you can use the setAttribute method or directly<br>manipulate the properties of the
+                    element.
+                    <br>example : element.setAttribute('title','this is a tooltip');</p>
+                    <br>
+                    2. .style
+                    To change an element's styles, you can modify<br>the style property directly.
+                    <br>example : element.style.color = 'blue';<br>
+                    element.style.backgroundColor = 'yellow';<br>
+                    element.style.display = 'none';
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
