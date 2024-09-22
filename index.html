@@ -30,9 +30,9 @@
     </script>
 </head>
 <body class="font-lexend">
-    <header class="container mx-auto bg-headerBg h-28">
+    <header class="container mx-auto bg-headerBg sticky top-0 z-10">
         <!-- Nav Section  -->
-        <nav class="top-0 sticky">
+        <nav class="">
             <div class="navbar flex justify-between">
                 <div class="navbar-start">
                     <!-- Blog button  -->
@@ -63,9 +63,120 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="container mx-auto relative">
+        <!-- Donate and history button section -->
+        <section class="bg-white flex justify-center gap-5 sticky top-20 z-10 p-10">
+            <div>
+                <button onclick="makeGreen('donation-btn')" id="donation-btn" class="btn btn-lg">Donation</button>
+            </div>
+            <div>
+                <button onclick="makeGreen('history-btn')" id="history-btn" class="btn btn-lg">History</button>
 
+            </div>
+        </section>
+        <!-- card section -->
+        <section class="max-w-6xl mx-auto mb-10 p-5 md:p-0">
+            <!-- card1 -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 border border-zinc-200 p-7 rounded-xl mb-12">
+                <div>
+                    <img src="./assets/noakhali.png" alt="">
+                </div>
+                <div class="space-y-4">
+                    <!-- Donation Balance -->
+                    <div class="w-28 flex items-center gap-2 bg-zinc-100 rounded p-2">
+                        <div>
+                            <img src="./assets/coin.png" alt="">
+                        </div>
+                        <div>
+                            <p>0 BDT</p>     
+                        </div>
+                    </div>
+                    <!-- Donation title -->
+                    <div class="md:w-[522px] space-y-3">
+                        <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <p class="text-secondaryText">The recent flood in Noakhali has shattered thousands of home. People are helpless and living a very
+                        risky life. There is food crisis. No internet to ask for immediate help. Too many people living in same shelter.
+                        Please come ahead for this people and donate generously.</p>
+                    </div>
+                    <!-- Donation Input Field -->
+                     <div class="md:w-[522px]">
+                        <input type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
+                     </div>
+                     <!-- donation button -->
+                     <div>
+                        <button class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                     </div>
+                </div>
+            </div>
+            <!-- card2 -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 border border-zinc-200 p-7 rounded-xl mb-12">
+                <div>
+                    <img src="./assets/feni.png" alt="">
+                </div>
+                <div class="space-y-4">
+                    <!-- Donation Balance -->
+                    <div class="w-28 flex items-center gap-2 bg-zinc-100 rounded p-2">
+                        <div>
+                            <img src="./assets/coin.png" alt="">
+                        </div>
+                        <div>
+                            <p>0 BDT</p>
+                        </div>
+                    </div>
+                    <!-- Donation title -->
+                    <div class="md:w-[522px] space-y-3">
+                        <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                        <p class="text-secondaryText">People in Feni are devasted because of the flood as well. The water level has crossed 2 story of buildings in some place. Lots have people have died and also sick people can't get treatment. Help them by donating. We are trying to manage medical team and food for everyone. We are also helping street animals too. We are rescuing and providing for them as well. So, Don't wait. Your donation matters a lot.</p>
+                    </div>
+                    <!-- Donation Input Field -->
+                    <div class="md:w-[522px]">
+                        <input type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
+                    </div>
+                    <!-- donation button -->
+                    <div>
+                        <button class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card3 -->
+            <div class="flex flex-col md:flex-row justify-center gap-8 border border-zinc-200 p-7 rounded-xl mb-10">
+                <div>
+                    <img src="./assets/quota-protest.png" alt="">
+                </div>
+                <div class="space-y-4">
+                    <!-- Donation Balance -->
+                    <div class="w-28 flex items-center gap-2 bg-zinc-100 rounded p-2">
+                        <div>
+                            <img src="./assets/coin.png" alt="">
+                        </div>
+                        <div>
+                            <p>0 BDT</p>
+                        </div>
+                    </div>
+                    <!-- Donation title -->
+                    <div class="md:w-[522px] space-y-3">
+                        <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+                        <p class="text-secondaryText">The recent quota movement has enormous amount of injuries. A lot of students lost their eyes and leg in the movement. Some people have bullet in their brain. If proper treatment is not ensured, many students will die.That's why we are collecting donations for them. You can donate for the better treatment. Also a part of your donation will also help families who have lost their child in this brutal movement.
+                        Your donation will help students and their family to hope for a better life again.
+                        </p>
+                    </div>
+                    <!-- Donation Input Field -->
+                    <div class="md:w-[522px]">
+                        <input type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
+                    </div>
+                    <!-- donation button -->
+                    <div>
+                        <button class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- history section -->
+         <div class="container max-auto">
+            <h1 class="font-bold text-xl text-center">This is history section</h1>
+         </div>
     </main>
+    <footer class="container mx-auto h-28 bg-headerBg"></footer>
     <script src="./js/script.js"></script>
 </body>
 </html>
