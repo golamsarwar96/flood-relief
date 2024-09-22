@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +7,60 @@
     <!-- daisyUI and Tailwind cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        btnColor: '#B4F461',
+                        headerBg: '#F9F7F3',
+                        secondaryText: 'rgba(17, 17, 17, 0.7)',
+                    },
+                    fontFamily: {
+                        lexend: 'lexend',
                     }
-                }
             }
         }
+    }
     </script>
-    <!-- Lexend font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        .lexend-font{
-            font-family: "Lexend", sans-serif;
-        }
-    </style>
 </head>
-<body class="lexend-font">
-    <header>
-        <nav>
-
+<body class="font-lexend">
+    <header class="container mx-auto bg-headerBg h-28">
+        <!-- Nav Section  -->
+        <nav class="top-0 sticky">
+            <div class="navbar flex justify-between">
+                <div class="navbar-start">
+                    <!-- Blog button  -->
+                    <button class="my-3 btn btn-normal bg-btnColor"><a href="./blog.html"></a>Blog</button>
+                </div>
+                <!-- logo container -->
+                <div class="navbar-center lg:flex">
+                    <div class="flex items-center gap-3 font-semibold lg:font-bold">
+                        <div>
+                            <img class="cursor-pointer" src="./assets/logo.png" alt="">
+                        </div>
+                        <div>
+                            <h2 class="textsm lg:text-xl cursor-pointer">Flood Relief BD</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- balance section -->
+                <div class="navbar-end">
+                    <div class="flex items-center gap-1 lg:gap-2">
+                        <div>
+                            <img src="./assets/coin.png" alt="">
+                        </div>
+                        <div>
+                            <h4 class=" text-sm lg:text-lg font-semibold text-gray-700">5000 BDT</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
