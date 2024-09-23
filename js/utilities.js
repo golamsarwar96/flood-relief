@@ -48,6 +48,7 @@ function getDonation(
 
     //capturing donation input.
     const firstDonation = document.getElementById(inputId).value;
+    const firstDonationNumber = parseFloat(firstDonation);
 
     const myModal1 = document.getElementById(modalId);
     if (firstDonation.trim() === "") {
@@ -57,22 +58,19 @@ function getDonation(
     }
 
     //converting it to a floating number
-    const firstDonationNumber = parseFloat(firstDonation);
 
+    console.log(firstDonationNumber);
     if (firstDonationNumber > mainBalanceNumber) {
-      document.getElementById("my_modal_1").checked = true;
+      myModal1.close();
       alert("You do not have sufficient balance");
       return;
-    } else {
-      document.getElementById("my_modal_1").checked = false;
     }
 
     if (isNaN(firstDonationNumber)) {
-      //Validation : check if the number is a string or not.
-      alert("Not a valid number");
+      alert("Invalid input");
+      myModal1.close();
       return;
     }
-
     //Converting current donation value to number;
     const currentDonationNumber = getTextInput(currentBalance);
     console.log(currentDonationNumber);
