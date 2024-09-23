@@ -23,7 +23,8 @@ getDonation(
   "first-donation-field",
   "main-balance",
   "first-current-donation",
-  "first-donation-name"
+  "first-donation-name",
+  "my_modal_1"
 );
 
 getDonation(
@@ -31,7 +32,8 @@ getDonation(
   "second-donation-field",
   "main-balance",
   "second-current-donation",
-  "second-donation-name"
+  "second-donation-name",
+  "my_modal_2"
 );
 
 getDonation(
@@ -39,5 +41,6 @@ getDonation(
   "third-donation-field",
   "main-balance",
   "third-current-donation",
-  "third-donation-name"
+  "third-donation-name",
+  "my_modal_3"
 );

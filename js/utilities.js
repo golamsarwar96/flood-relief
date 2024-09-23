@@ -27,7 +27,14 @@ function getTextInput(id) {
   return currentDonationNumber;
 }
 
-function getDonation(buttonId, inputId, mainBalance, currentBalance, donation) {
+function getDonation(
+  buttonId,
+  inputId,
+  mainBalance,
+  currentBalance,
+  donation,
+  modalId
+) {
   document.getElementById(buttonId).addEventListener("click", function () {
     //Overall balance
     const mainBalanceNumber = getTextInput(mainBalance);
@@ -41,12 +48,23 @@ function getDonation(buttonId, inputId, mainBalance, currentBalance, donation) {
 
     //capturing donation input.
     const firstDonation = document.getElementById(inputId).value;
+
+    const myModal1 = document.getElementById(modalId);
+    if (firstDonation.trim() === "") {
+      myModal1.close();
+    } else {
+      myModal1.showModal();
+    }
+
     //converting it to a floating number
     const firstDonationNumber = parseFloat(firstDonation);
 
     if (firstDonationNumber > mainBalanceNumber) {
+      document.getElementById("my_modal_1").checked = true;
       alert("You do not have sufficient balance");
       return;
+    } else {
+      document.getElementById("my_modal_1").checked = false;
     }
 
     if (isNaN(firstDonationNumber)) {

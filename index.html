@@ -108,7 +108,7 @@
                      </div>
                      <!-- donation button -->
                      <div>
-                        <button onclick="my_modal_1.showModal()"  id="first-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <button id="first-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
 
                         <dialog id="my_modal_1" class="modal">
                             <div class="modal-box">
@@ -155,7 +155,23 @@
                     </div>
                     <!-- donation button -->
                     <div>
-                        <button id="second-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <button onclick="my_modal_1.showModal()" id="second-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <dialog id="my_modal_2" class="modal">
+                            <div class="modal-box">
+                                <h3 class="mb-5 text-3xl font-bold  text-center">Congratulations!</h3>
+                                <div class="flex justify-center mb-5">
+                                    <img src="./assets/coin.png" class="w-10" alt="">
+                                </div>
+                                <p class="py-4 text-center">You have donated for mankind</p>
+                                <h3 class="text-center font-semibold text-2xl">Successfully</h3>
+                                <div class="modal-action flex justify-center">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Close Confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
@@ -188,6 +204,22 @@
                     <!-- donation button -->
                     <div>
                         <button id="third-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <dialog id="my_modal_3" class="modal">
+                            <div class="modal-box">
+                                <h3 class="mb-5 text-3xl font-bold  text-center">Congratulations!</h3>
+                                <div class="flex justify-center mb-5">
+                                    <img src="./assets/coin.png" class="w-10" alt="">
+                                </div>
+                                <p class="py-4 text-center">You have donated for mankind</p>
+                                <h3 class="text-center font-semibold text-2xl">Successfully</h3>
+                                <div class="modal-action flex justify-center">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Close Confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </div>
