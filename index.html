@@ -96,8 +96,8 @@
                         </div>
                     </div>
                     <!-- Donation title -->
-                    <div class="md:w-[522px] space-y-3">
-                        <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <div id="donation-title" class="md:w-[522px] space-y-3">
+                        <h1 class="text-xl font-bold">Donate for <span id="first-donation-name">Flood at Noakhali, Bangladesh</span></h1>
                         <p class="text-secondaryText">The recent flood in Noakhali has shattered thousands of home. People are helpless and living a very
                         risky life. There is food crisis. No internet to ask for immediate help. Too many people living in same shelter.
                         Please come ahead for this people and donate generously.</p>
@@ -108,7 +108,24 @@
                      </div>
                      <!-- donation button -->
                      <div>
-                        <button id="first-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <button onclick="my_modal_1.showModal()"  id="first-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box">
+                                <h3 class="mb-5 text-3xl font-bold  text-center">Congratulations!</h3>
+                                <div class="flex justify-center mb-5">
+                                    <img src="./assets/coin.png" class="w-10" alt="">
+                                </div>
+                                <p class="py-4 text-center">You have donated for mankind</p>
+                                <h3 class="text-center font-semibold text-2xl">Successfully</h3>
+                                <div class="modal-action flex justify-center">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Close Confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                      </div>
                 </div>
             </div>
@@ -129,7 +146,7 @@
                     </div>
                     <!-- Donation title -->
                     <div class="md:w-[522px] space-y-3">
-                        <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                        <h1 class="text-xl font-bold">Donate for <span id="second-donation-name">Flood Relief in Feni,Bangladesh<span></h1>
                         <p class="text-secondaryText">People in Feni are devasted because of the flood as well. The water level has crossed 2 story of buildings in some place. Lots have people have died and also sick people can't get treatment. Help them by donating. We are trying to manage medical team and food for everyone. We are also helping street animals too. We are rescuing and providing for them as well. So, Don't wait. Your donation matters a lot.</p>
                     </div>
                     <!-- Donation Input Field -->
@@ -159,7 +176,7 @@
                     </div>
                     <!-- Donation title -->
                     <div class="md:w-[522px] space-y-3">
-                        <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+                        <h1 id="third-donation-name" class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
                         <p class="text-secondaryText">The recent quota movement has enormous amount of injuries. A lot of students lost their eyes and leg in the movement. Some people have bullet in their brain. If proper treatment is not ensured, many students will die.That's why we are collecting donations for them. You can donate for the better treatment. Also a part of your donation will also help families who have lost their child in this brutal movement.
                         Your donation will help students and their family to hope for a better life again.
                         </p>
@@ -176,11 +193,10 @@
             </div>
         </section>
         <!-- history section -->
-         <div id="history-form" class="hidden container max-auto">
-            <h1 class="font-bold text-xl text-center">This is history section</h1>
+         <div id="history-form" class="container w-11/12 mx-auto flex flex-col justify-center items-center text-left">
+           
          </div>
     </main>
-    <footer class="container mx-auto h-28 bg-headerBg"></footer>
     <script src="./js/utilities.js"></script>
     <script src="./js/script.js"></script>
 </body>

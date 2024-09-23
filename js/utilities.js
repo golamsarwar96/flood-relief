@@ -27,7 +27,7 @@ function getTextInput(id) {
   return currentDonationNumber;
 }
 
-function getDonation(buttonId, inputId, mainBalance, currentBalance) {
+function getDonation(buttonId, inputId, mainBalance, currentBalance, donation) {
   document.getElementById(buttonId).addEventListener("click", function () {
     //Overall balance
     const mainBalanceNumber = getTextInput(mainBalance);
@@ -75,5 +75,23 @@ function getDonation(buttonId, inputId, mainBalance, currentBalance) {
     document.getElementById(
       mainBalance
     ).innerHTML = `${updatedMainBalance} BDT`;
+
+    const today = new Date();
+    const div = document.createElement("div");
+    const donationName = document.getElementById(donation).innerText;
+    div.innerHTML = `
+         <div class="border border-zinc-200 w-full max-w-6xl rounded-2xl p-10 text-black text-left">
+                <p class="font-semibold text-xl">
+                    ${firstDonationNumber} Taka is Donated for ${donationName}.
+                <p>
+                <br>
+                <p class="text-secondaryText">${today}</p>
+            </div>
+            <br>
+    `;
+
+    document.getElementById("history-form").appendChild(div);
+
+    //modal
   });
 }

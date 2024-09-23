@@ -22,19 +22,22 @@ getDonation(
   "first-donation-btn",
   "first-donation-field",
   "main-balance",
-  "first-current-donation"
+  "first-current-donation",
+  "first-donation-name"
 );
 
 getDonation(
   "second-donation-btn",
   "second-donation-field",
   "main-balance",
-  "second-current-donation"
+  "second-current-donation",
+  "second-donation-name"
 );
 
 getDonation(
   "third-donation-btn",
   "third-donation-field",
   "main-balance",
-  "third-current-donation"
+  "third-current-donation",
+  "third-donation-name"
 );
