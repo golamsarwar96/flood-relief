@@ -27,4 +27,53 @@ function getTextInput(id) {
   return currentDonationNumber;
 }
 
-function getDonation(id) {}
+function getDonation(buttonId, inputId, mainBalance, currentBalance) {
+  document.getElementById(buttonId).addEventListener("click", function () {
+    //Overall balance
+    const mainBalanceNumber = getTextInput(mainBalance);
+    console.log(mainBalanceNumber);
+
+    //Validation : main balance should be greater than 0
+    if (mainBalanceNumber <= 0) {
+      alert("You do not have sufficient balance");
+      return;
+    }
+
+    //capturing donation input.
+    const firstDonation = document.getElementById(inputId).value;
+    //converting it to a floating number
+    const firstDonationNumber = parseFloat(firstDonation);
+
+    if (firstDonationNumber > mainBalanceNumber) {
+      alert("You do not have sufficient balance");
+      return;
+    }
+
+    if (isNaN(firstDonationNumber)) {
+      //Validation : check if the number is a string or not.
+      alert("Not a valid number");
+      return;
+    }
+
+    //Converting current donation value to number;
+    const currentDonationNumber = getTextInput(currentBalance);
+    console.log(currentDonationNumber);
+
+    //Updated donation after a donation.
+    const updatedDonation = firstDonationNumber + currentDonationNumber;
+
+    //Setting up the balance in frontend
+    document.getElementById(
+      currentBalance
+    ).innerText = `${updatedDonation} BDT`;
+
+    //Overall balance after making a donation
+    const updatedMainBalance = mainBalanceNumber - firstDonationNumber;
+    console.log(updatedMainBalance);
+
+    //Setting up main balance in frontend.
+    document.getElementById(
+      mainBalance
+    ).innerHTML = `${updatedMainBalance} BDT`;
+  });
+}

@@ -87,12 +87,12 @@
                 </div>
                 <div class="space-y-4">
                     <!-- Donation Balance -->
-                    <div class="w-28 flex items-center gap-2 bg-zinc-100 rounded p-2">
+                    <div class="w-32 flex items-center gap-2 bg-zinc-100 rounded p-2">
                         <div>
                             <img src="./assets/coin.png" alt="">
                         </div>
-                        <div id="current-donation">
-                            <p>122 BDT</p>     
+                        <div id="first-current-donation">
+                            <p>1220 BDT</p>     
                         </div>
                     </div>
                     <!-- Donation title -->
@@ -119,11 +119,11 @@
                 </div>
                 <div class="space-y-4">
                     <!-- Donation Balance -->
-                    <div class="w-28 flex items-center gap-2 bg-zinc-100 rounded p-2">
+                    <div class="w-32 flex items-center gap-2 bg-zinc-100 rounded p-2">
                         <div>
                             <img src="./assets/coin.png" alt="">
                         </div>
-                        <div>
+                        <div id="second-current-donation">
                             <p>0 BDT</p>
                         </div>
                     </div>
@@ -134,11 +134,11 @@
                     </div>
                     <!-- Donation Input Field -->
                     <div class="md:w-[522px]">
-                        <input type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
+                        <input id="second-donation-field" type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
                     </div>
                     <!-- donation button -->
                     <div>
-                        <button class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <button id="second-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -149,11 +149,11 @@
                 </div>
                 <div class="space-y-4">
                     <!-- Donation Balance -->
-                    <div class="w-28 flex items-center gap-2 bg-zinc-100 rounded p-2">
+                    <div class="w-32 flex items-center gap-2 bg-zinc-100 rounded p-2">
                         <div>
                             <img src="./assets/coin.png" alt="">
                         </div>
-                        <div>
+                        <div id="third-current-donation">
                             <p>0 BDT</p>
                         </div>
                     </div>
@@ -166,17 +166,17 @@
                     </div>
                     <!-- Donation Input Field -->
                     <div class="md:w-[522px]">
-                        <input type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
+                        <input id="third-donation-field" type="text" placeholder="Write Donation Amount" class="text-sm input input-bordered w-[98%]" />
                     </div>
                     <!-- donation button -->
                     <div>
-                        <button class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
+                        <button id="third-donation-btn" class="btn btn-lg bg-btnColor w-[98%]">Donate Now</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- history section -->
-         <div id="history-form" class="container max-auto">
+         <div id="history-form" class="hidden container max-auto">
             <h1 class="font-bold text-xl text-center">This is history section</h1>
          </div>
     </main>
